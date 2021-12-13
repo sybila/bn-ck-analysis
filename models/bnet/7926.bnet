@@ -1,0 +1,26 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+S_1,   !S_18
+S_10,  !S_2
+S_11,  S_7&S_16
+S_12,  S_12
+S_13,  !S_18
+S_14,  !S_2&S_6
+S_15,  !S_2
+S_16,  S_20
+S_17,  S_6
+S_18,  S_7&S_15
+S_19,  !S_8&!S_7&!S_9&S_19 | !S_8&!S_7&S_9&!S_14&!S_17&S_19 | !S_8&S_7 | S_8&!S_7&!S_9 | S_8&!S_7&S_9&!S_14 | S_8&!S_7&S_9&S_14&!S_17 | S_8&S_7
+S_2,   !S_7&S_13
+S_20,  S_2&!S_18
+S_21,  S_7&S_10
+S_22,  !S_2&!S_11&S_21 | !S_2&S_11
+S_3,   S_2&!S_18
+S_4,   !S_18
+S_5,   S_20
+S_6,   S_19
+S_7,   !S_12&S_1&S_3&S_5 | S_12&!S_1&S_4 | S_12&S_1&!S_3&S_4 | S_12&S_1&S_3&!S_4&S_5 | S_12&S_1&S_3&S_4
+S_8,   S_8
+S_9,   S_6
