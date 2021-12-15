@@ -1,0 +1,50 @@
+Agent M
+	Vars:
+		S_1: boolean;
+		S_10: boolean;
+		S_11: boolean;
+		S_12: boolean;
+		S_2: boolean;
+		S_3: boolean;
+		S_4: boolean;
+		S_5: boolean;
+		S_6: boolean;
+		S_7: boolean;
+		S_8: boolean;
+		S_9: boolean;
+	end Vars
+	Actions = {none};
+	Protocol:
+		Other: {none};
+	end Protocol
+	Evolution:
+		S_1=true  if S_10=true;
+		S_1=false if S_10=false;
+		S_10=true  if S_10=true;
+		S_10=false if S_10=false;
+		S_11=true  if ~S_5&~S_6&~S_8&S_11|~S_5&~S_6&S_8|S_5&~S_6=true;
+		S_11=false if ~S_5&~S_6&~S_8&S_11|~S_5&~S_6&S_8|S_5&~S_6=false;
+		S_12=true  if S_12=true;
+		S_12=false if S_12=false;
+		S_2=true  if ~S_10|S_10&~S_3&~S_4&~S_9&S_12|S_10&~S_3&~S_4&S_9|S_10&~S_3&S_4|S_10&S_3=true;
+		S_2=false if ~S_10|S_10&~S_3&~S_4&~S_9&S_12|S_10&~S_3&~S_4&S_9|S_10&~S_3&S_4|S_10&S_3=false;
+		S_3=true  if ~S_10&~S_2&S_3|~S_10&S_2|S_10=true;
+		S_3=false if ~S_10&~S_2&S_3|~S_10&S_2|S_10=false;
+		S_4=true  if S_4=true;
+		S_4=false if S_4=false;
+		S_5=true  if ~S_5&~S_6&~S_8&S_11|~S_5&~S_6&S_8|S_5&~S_6=true;
+		S_5=false if ~S_5&~S_6&~S_8&S_11|~S_5&~S_6&S_8|S_5&~S_6=false;
+		S_6=true  if S_6=true;
+		S_6=false if S_6=false;
+		S_7=true  if ~S_5&~S_6&~S_8&S_11|~S_5&~S_6&S_8|S_5&~S_6=true;
+		S_7=false if ~S_5&~S_6&~S_8&S_11|~S_5&~S_6&S_8|S_5&~S_6=false;
+		S_8=true  if ~S_5&~S_6&~S_8&S_11|~S_5&~S_6&S_8|S_5&~S_6=true;
+		S_8=false if ~S_5&~S_6&~S_8&S_11|~S_5&~S_6&S_8|S_5&~S_6=false;
+		S_9=true  if ~S_7&S_9=true;
+		S_9=false if ~S_7&S_9=false;
+	end Evolution
+end Agent
+
+InitStates
+		M.S_1=true or M.S_1=false;
+end InitStates

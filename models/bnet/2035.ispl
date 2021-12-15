@@ -1,0 +1,29 @@
+Agent M
+	Vars:
+		S_1: boolean;
+		S_2: boolean;
+		S_3: boolean;
+		S_4: boolean;
+		S_5: boolean;
+	end Vars
+	Actions = {none};
+	Protocol:
+		Other: {none};
+	end Protocol
+	Evolution:
+		S_1=true  if S_2&~S_3=true;
+		S_1=false if S_2&~S_3=false;
+		S_2=true  if S_1&S_2&~S_3=true;
+		S_2=false if S_1&S_2&~S_3=false;
+		S_3=true  if ~S_1&~S_2&S_4&~S_5=true;
+		S_3=false if ~S_1&~S_2&S_4&~S_5=false;
+		S_4=true  if ~S_1&~S_2=true;
+		S_4=false if ~S_1&~S_2=false;
+		S_5=true  if S_1&~S_3&~S_4=true;
+		S_5=false if S_1&~S_3&~S_4=false;
+	end Evolution
+end Agent
+
+InitStates
+		M.S_1=true or M.S_1=false;
+end InitStates

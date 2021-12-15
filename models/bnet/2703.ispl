@@ -1,0 +1,89 @@
+Agent M
+	Vars:
+		S_1: boolean;
+		S_10: boolean;
+		S_11: boolean;
+		S_12: boolean;
+		S_13: boolean;
+		S_14: boolean;
+		S_15: boolean;
+		S_16: boolean;
+		S_17: boolean;
+		S_18: boolean;
+		S_19: boolean;
+		S_2: boolean;
+		S_20: boolean;
+		S_21: boolean;
+		S_22: boolean;
+		S_23: boolean;
+		S_24: boolean;
+		S_25: boolean;
+		S_3: boolean;
+		S_4: boolean;
+		S_5: boolean;
+		S_6: boolean;
+		S_7: boolean;
+		S_8: boolean;
+		S_9: boolean;
+	end Vars
+	Actions = {none};
+	Protocol:
+		Other: {none};
+	end Protocol
+	Evolution:
+		S_1=true  if ~S_17&~S_21&~S_22&S_1&~S_3|~S_17&S_21&~S_22&~S_3=true;
+		S_1=false if ~S_17&~S_21&~S_22&S_1&~S_3|~S_17&S_21&~S_22&~S_3=false;
+		S_10=true  if ~S_4&~S_9&~S_10&~S_16&S_18|~S_4&~S_9&S_10&~S_16|S_4&~S_9&~S_16=true;
+		S_10=false if ~S_4&~S_9&~S_10&~S_16&S_18|~S_4&~S_9&S_10&~S_16|S_4&~S_9&~S_16=false;
+		S_11=true  if ~S_3&S_11=true;
+		S_11=false if ~S_3&S_11=false;
+		S_12=true  if ~S_2&~S_12&~S_14&S_25|~S_2&~S_12&S_14|~S_2&S_12|S_2=true;
+		S_12=false if ~S_2&~S_12&~S_14&S_25|~S_2&~S_12&S_14|~S_2&S_12|S_2=false;
+		S_13=true  if ~S_5&S_13|S_5=true;
+		S_13=false if ~S_5&S_13|S_5=false;
+		S_14=true  if ~S_10&S_14&~S_15|S_10&~S_15=true;
+		S_14=false if ~S_10&S_14&~S_15|S_10&~S_15=false;
+		S_15=true  if ~S_12&S_15|S_12=true;
+		S_15=false if ~S_12&S_15|S_12=false;
+		S_16=true  if ~S_1&~S_3&S_16|S_1&~S_3=true;
+		S_16=false if ~S_1&~S_3&S_16|S_1&~S_3=false;
+		S_17=true  if S_17=true;
+		S_17=false if S_17=false;
+		S_18=true  if ~S_2&~S_5&~S_18&S_19|~S_2&~S_5&S_18|~S_2&S_5|S_2=true;
+		S_18=false if ~S_2&~S_5&~S_18&S_19|~S_2&~S_5&S_18|~S_2&S_5|S_2=false;
+		S_19=true  if ~S_4&~S_5&~S_7&~S_12&~S_18&S_19|~S_4&~S_5&S_7&~S_12&~S_18|~S_4&S_5&~S_12&~S_18|S_4&~S_12&~S_18=true;
+		S_19=false if ~S_4&~S_5&~S_7&~S_12&~S_18&S_19|~S_4&~S_5&S_7&~S_12&~S_18|~S_4&S_5&~S_12&~S_18|S_4&~S_12&~S_18=false;
+		S_2=true  if ~S_2&S_10&~S_12|S_2&~S_12=true;
+		S_2=false if ~S_2&S_10&~S_12|S_2&~S_12=false;
+		S_20=true  if ~S_15&S_20=true;
+		S_20=false if ~S_15&S_20=false;
+		S_21=true  if S_21=true;
+		S_21=false if S_21=false;
+		S_22=true  if S_22=true;
+		S_22=false if S_22=false;
+		S_23=true  if ~S_1&~S_7&S_23|~S_1&S_7|S_1=true;
+		S_23=false if ~S_1&~S_7&S_23|~S_1&S_7|S_1=false;
+		S_24=true  if S_24=true;
+		S_24=false if S_24=false;
+		S_25=true  if ~S_4&~S_6&~S_9&~S_12&S_25|S_4&~S_6&~S_9&~S_12=true;
+		S_25=false if ~S_4&~S_6&~S_9&~S_12&S_25|S_4&~S_6&~S_9&~S_12=false;
+		S_3=true  if ~S_21&~S_1&~S_2&~S_3&~S_4&S_5&~S_14|~S_21&~S_1&~S_2&~S_3&S_4&~S_14|~S_21&~S_1&~S_2&S_3&~S_14|~S_21&S_1&~S_2&~S_14|S_21&~S_2&~S_14=true;
+		S_3=false if ~S_21&~S_1&~S_2&~S_3&~S_4&S_5&~S_14|~S_21&~S_1&~S_2&~S_3&S_4&~S_14|~S_21&~S_1&~S_2&S_3&~S_14|~S_21&S_1&~S_2&~S_14|S_21&~S_2&~S_14=false;
+		S_4=true  if ~S_17&~S_21&~S_22&~S_24&~S_4&S_13|~S_17&~S_21&~S_22&~S_24&S_4|~S_17&S_21&~S_22&~S_24=true;
+		S_4=false if ~S_17&~S_21&~S_22&~S_24&~S_4&S_13|~S_17&~S_21&~S_22&~S_24&S_4|~S_17&S_21&~S_22&~S_24=false;
+		S_5=true  if ~S_17&~S_21&~S_22&S_5|~S_17&S_21&~S_22=true;
+		S_5=false if ~S_17&~S_21&~S_22&S_5|~S_17&S_21&~S_22=false;
+		S_6=true  if ~S_3&~S_6&~S_14&~S_15&~S_18&S_20|~S_3&~S_6&~S_14&~S_15&S_18|~S_3&~S_6&S_14&~S_15|~S_3&S_6&~S_15|S_3&~S_15=true;
+		S_6=false if ~S_3&~S_6&~S_14&~S_15&~S_18&S_20|~S_3&~S_6&~S_14&~S_15&S_18|~S_3&~S_6&S_14&~S_15|~S_3&S_6&~S_15|S_3&~S_15=false;
+		S_7=true  if ~S_7&S_10|S_7=true;
+		S_7=false if ~S_7&S_10|S_7=false;
+		S_8=true  if ~S_3&S_8|S_3=true;
+		S_8=false if ~S_3&S_8|S_3=false;
+		S_9=true  if ~S_3&~S_4&S_9&~S_15&~S_18|~S_3&S_4&~S_15&~S_18=true;
+		S_9=false if ~S_3&~S_4&S_9&~S_15&~S_18|~S_3&S_4&~S_15&~S_18=false;
+	end Evolution
+end Agent
+
+InitStates
+		M.S_1=true or M.S_1=false;
+end InitStates
